@@ -67,7 +67,7 @@ body {
 
 .image-gallery {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-columns: 1fr 1fr; /* Two equal columns */
     gap: 15px;
     grid-column: 2 / 3; 
 }
@@ -141,3 +141,4 @@ body {
         font-size: 3.5rem;
     }
 }
+
