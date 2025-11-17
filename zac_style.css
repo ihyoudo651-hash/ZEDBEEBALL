@@ -1,0 +1,230 @@
+/*
+    CSS for Zac is the Best Website
+    Using Permanent Marker for the handwritten/paint brush font.
+*/
+
+:root {
+    --green-pitch: #4CAF50; /* A bright, energetic green */
+    --dark-kit: #1e1e1e;   /* Dark background for contrast/kit color */
+    --chalk-white: #f0f0f0; /* Light text color (like chalk on a board) */
+}
+
+body {
+    font-family: sans-serif;
+    background-color: var(--dark-kit);
+    color: var(--chalk-white);
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+/* --- HERO SECTION / MAIN TITLE --- */
+.hero {
+    background: linear-gradient(180deg, var(--dark-kit), #333);
+    padding: 40px 20px;
+    border-bottom: 8px solid var(--green-pitch);
+}
+
+#main-title {
+    /* The main paint brush/handwritten font */
+    font-family: 'Permanent Marker', cursive;
+    font-size: 5rem; 
+    letter-spacing: 5px;
+    color: var(--green-pitch);
+    /* Shadow effect for a bold, handwritten look */
+    text-shadow: 4px 4px 0 rgba(0, 0, 0, 0.7);
+    margin: 0;
+}
+
+.hero p {
+    font-size: 1.5rem;
+    font-style: italic;
+}
+
+/* --- CONTENT AND GALLERY --- */
+.content-grid {
+    padding: 40px 20px;
+    display: grid;
+    gap: 40px;
+    grid-template-columns: 1fr 2fr; /* Stat column and Gallery column */
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.football-stat, .video-section {
+    background-color: #2a2a2a;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+    grid-column: span 2; /* Span both columns initially */
+}
+
+.football-stat h2, .video-section h2 {
+    font-family: 'Permanent Marker', cursive;
+    color: var(--green-pitch);
+    font-size: 2.5rem;
+}
+
+.image-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+    grid-column: 2 / 3; /* Positioned in the second column */
+}
+
+.gallery-image {
+    width: 100%;
+    height: 250px;
+    object-fit: cover; /* Ensures images fill the container without distortion */
+    border: 3px solid var(--chalk-white);
+    border-radius: 5px;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    cursor: pointer;
+}
+
+.gallery-image:hover {
+    transform: scale(1.05) rotate(1deg); /* Cool hover effect */
+    box-shadow: 0 0 25px var(--green-pitch); /* Green glowing focus */
+}
+
+/*
+    CSS for Zac is the Best Website
+    Using Permanent Marker for the handwritten/paint brush font.
+*/
+
+:root {
+    --green-pitch: #4CAF50; /* A bright, energetic green */
+    --dark-kit: #1e1e1e;   /* Dark background for contrast/kit color */
+    --chalk-white: #f0f0f0; /* Light text color (like chalk on a board) */
+}
+
+body {
+    font-family: sans-serif;
+    background-color: var(--dark-kit);
+    color: var(--chalk-white);
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+/* --- HERO SECTION / MAIN TITLE --- */
+.hero {
+    background: linear-gradient(180deg, var(--dark-kit), #333);
+    padding: 40px 20px;
+    border-bottom: 8px solid var(--green-pitch);
+}
+
+#main-title {
+    /* The main paint brush/handwritten font */
+    font-family: 'Permanent Marker', cursive;
+    font-size: 5rem; 
+    letter-spacing: 5px;
+    color: var(--green-pitch);
+    /* Shadow effect for a bold, handwritten look */
+    text-shadow: 4px 4px 0 rgba(0, 0, 0, 0.7);
+    margin: 0;
+}
+
+.hero p {
+    font-size: 1.5rem;
+    font-style: italic;
+}
+
+/* --- CONTENT AND GALLERY --- */
+.content-grid {
+    padding: 40px 20px;
+    display: grid;
+    gap: 40px;
+    grid-template-columns: 1fr 2fr; /* Stat column and Gallery column */
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.football-stat, .video-section {
+    background-color: #2a2a2a;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+    grid-column: span 2; /* Span both columns initially */
+}
+
+.football-stat h2, .video-section h2 {
+    font-family: 'Permanent Marker', cursive;
+    color: var(--green-pitch);
+    font-size: 2.5rem;
+}
+
+.image-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+    grid-column: 2 / 3; /* Positioned in the second column */
+}
+
+.gallery-image {
+    width: 100%;
+    height: 250px;
+    object-fit: cover; /* Ensures images fill the container without distortion */
+    border: 3px solid var(--chalk-white);
+    border-radius: 5px;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    cursor: pointer;
+}
+
+.gallery-image:hover {
+    transform: scale(1.05) rotate(1deg); /* Cool hover effect */
+    box-shadow: 0 0 25px var(--green-pitch); /* Green glowing focus */
+}
+
+/* Stat Meter Styling (A simple bar) */
+#stat-meter {
+    height: 30px;
+    background-color: #111;
+    border-radius: 15px;
+    overflow: hidden;
+    margin: 15px 0;
+}
+#stat-meter::before {
+    content: attr(data-value) "%";
+    display: block;
+    height: 100%;
+    width: 0; /* JS will set this width */
+    background-color: var(--green-pitch);
+    text-align: right;
+    line-height: 30px;
+    padding-right: 10px;
+    box-sizing: border-box;
+    font-weight: bold;
+    color: var(--dark-kit);
+    transition: width 1.5s ease-out;
+}
+
+/* Link Styling */
+#highlight-link {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 20px;
+    background-color: var(--green-pitch);
+    color: var(--dark-kit);
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+#highlight-link:hover {
+    background-color: #388e3c;
+}
+
+/* --- Responsive adjustments --- */
+@media (max-width: 800px) {
+    .content-grid {
+        grid-template-columns: 1fr; /* Single column on smaller screens */
+    }
+    .football-stat, .video-section, .image-gallery {
+        grid-column: span 1; 
+    }
+    #main-title {
+        font-size: 3.5rem;
+    }
+}
